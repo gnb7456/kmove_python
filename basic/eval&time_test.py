@@ -1,7 +1,11 @@
-import random
+import random,time
 
 count=0
 oper=['+','-','*','/']
+
+input('타임사칙연산게임 시작')
+start=time.time()
+
 for x in range(0,5):
     a=random.randint(1,50)
     b=random.randint(1,50)
@@ -20,6 +24,6 @@ for x in range(0,5):
     else: 
         print("오답!")
 
-print("5개 중 %d개 맞음" %count)
-
-
+end=time.time()
+et = end - start
+print("%.0f초 동안 %d개 맞음" %(et,count))
